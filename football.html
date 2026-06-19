@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Football</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="football-bg">
+
+<header>
+    <h1>Football</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="basketball.html">Basketball</a></li>
+            <li><a href="rugby.html">Rugby</a></li>
+            <li><a href="pronostics.html">Pronostics</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page">
+    <h2>Matchs de Football</h2>
+
+    <!-- Matchs en direct -->
+    <div id="liveFootball"></div>
+
+    <!-- Résultats des 10 derniers jours -->
+    <div id="pastFootball"></div>
+
+    <!-- Matchs à venir sur 10 jours -->
+    <div id="upcomingFootball"></div>
+
+</section>
+
+<script src="football.js"></script>
+</body>
+</html>

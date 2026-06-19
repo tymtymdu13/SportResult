@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pronostics</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pronostics-bg">
+
+<header>
+    <h1>Pronostics</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="football.html">Football</a></li>
+            <li><a href="basketball.html">Basketball</a></li>
+            <li><a href="rugby.html">Rugby</a></li>
+            <li><a href="pronostics.html">Pronostics</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page pronostics-container">
+
+    <div class="pronostics-left">
+
+        <h2>Pronostics :</h2>
+
+        <!-- PRONOSTIC ALÉATOIRE -->
+        <div class="card fade">
+            <h3>Pronostic aléatoire</h3>
+            <button id="btnRandom">Générer un pronostic</button>
+            <p id="randomResult" class="result"></p>
+        </div>
+
+        <!-- PRONOSTIC PAR SPORT -->
+        <div class="card fade">
+            <h3>Pronostic par sport</h3>
+
+            <label for="sportSelect">Choisir un sport :</label>
+            <select id="sportSelect">
+                <option value="football">Football</option>
+                <option value="basketball">Basketball</option>
+                <option value="rugby">Rugby</option>
+            </select>
+
+            <button id="btnSport">Générer</button>
+            <p id="sportResult" class="result"></p>
+        </div>
+
+        <!-- PRONOSTIC PERSONNALISÉ -->
+        <div class="card fade">
+            <h3>Pronostic personnalisé</h3>
+
+            <input type="text" id="team1" placeholder="Équipe 1">
+            <input type="text" id="team2" placeholder="Équipe 2">
+
+            <button id="btnCustom">Générer</button>
+            <p id="customResult" class="result"></p>
+        </div>
+
+    </div>
+
+    <!-- IMAGE À DROITE -->
+    <div class="pronostics-right">
+        <img src="prono.jpg" alt="Pronostics" class="pronostics-img">
+    </div>
+
+</section>
+
+<script src="pronostics.js"></script>
+</body>
+</html>

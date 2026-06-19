@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Basketball</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="basketball-bg">
+
+<header>
+    <h1>Basketball</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="football.html">Football</a></li>
+            <li><a href="basketball.html">Basketball</a></li>
+            <li><a href="rugby.html">Rugby</a></li>
+            <li><a href="pronostics.html">Pronostics</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page">
+    <h2>Matchs de Basketball</h2>
+
+    <!-- Matchs en direct -->
+    <div id="liveBasket"></div>
+
+    <!-- Résultats des 10 derniers jours -->
+    <div id="pastBasket"></div>
+
+    <!-- Matchs à venir sur 10 jours -->
+    <div id="upcomingBasket"></div>
+
+</section>
+
+<script src="basketball.js"></script>
+</body>
+</html>

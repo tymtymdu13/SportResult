@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rugby</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="rugby-bg">
+
+<header>
+    <h1>Rugby</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="football.html">Football</a></li>
+            <li><a href="basketball.html">Basketball</a></li>
+            <li><a href="rugby.html">Rugby</a></li>
+            <li><a href="pronostics.html">Pronostics</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page">
+    <h2>Matchs de Rugby</h2>
+
+    <!-- Matchs en direct -->
+    <div id="liveRugby"></div>
+
+    <!-- Résultats des 10 derniers jours -->
+    <div id="pastRugby"></div>
+
+    <!-- Matchs à venir sur 10 jours -->
+    <div id="upcomingRugby"></div>
+
+</section>
+
+<script src="rugby.js"></script>
+</body>
+</html>

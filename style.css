@@ -1,0 +1,352 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#1e293b;
+padding:20px;
+color:white;
+}
+
+header h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+background:#2563eb;
+color:white;
+text-align:center;
+padding:60px;
+}
+
+.sports{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.card{
+width:300px;
+background:white;
+padding:20px;
+border-radius:10px;
+text-decoration:none;
+color:black;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.page{
+padding:40px;
+}
+
+.match{
+background:white;
+padding:20px;
+margin:10px 0;
+border-radius:10px;
+}
+
+button{
+padding:15px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+#resultat{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+}
+
+.match-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.info {
+    text-align: right;
+    font-size: 14px;
+}
+
+/* Mise en page pronostics */
+.pronostics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* encore plus d'espace */
+    margin-top: 40px;
+}
+
+/* Colonne gauche */
+.pronostics-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 45px; /* espace entre les cartes */
+}
+
+/* Cartes du générateur */
+.pronostics-left .card {
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.15);
+}
+
+/* Colonne droite (image) */
+.pronostics-right {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* CENTRÉ HORIZONTAL */
+    align-items: center;     /* CENTRÉ VERTICAL */
+}
+
+/* Image grande et centrée */
+.pronostics-img {
+    width: 100%;
+    max-width: 750px; /* PLUS GRAND */
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(0,0,0,0.25);
+    animation: float 4s ease-in-out infinite;
+    display: block;
+}
+
+/* Effet flottant */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+    .pronostics-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pronostics-right {
+        margin-top: 25px;
+    }
+
+    .pronostics-img {
+        max-width: 420px;
+    }
+}
+
+/* Effet soulignage animé */
+nav ul li a {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Ligne animée au survol */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #ffffff; /* couleur du soulignage */
+    transition: width 0.3s ease;
+}
+
+/* Survol → soulignage */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Page active → soulignage permanent */
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Arrière-plan pour la page d'accueil */
+body.accueil-bg {
+    background-image: url("stade-football-nuit_23-2151952489.avif"); /* mets ton image ici */
+    background-size: cover;        /* l’image couvre tout l’écran */
+    background-position: center;   /* centrée */
+    background-repeat: no-repeat;  /* pas de répétition */
+    background-attachment: fixed;  /* effet paralax (optionnel) */
+}
+
+/* Titres en blanc uniquement sur l'accueil */
+body.accueil-bg h1,
+body.accueil-bg h2,
+body.accueil-bg h3 {
+    color: white !important;
+}
+
+/* Met uniquement "Aucun match trouvé" en blanc */
+.no-match {
+    color: white !important;
+}
+
+/* Espace entre les sections principales */
+section {
+    margin-bottom: 60px;
+}
+
+/* Espace entre les titres et leur contenu */
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* Espace entre les blocs de résultats */
+.live-section > div {
+    margin-bottom: 25px;
+}
+
+/* Espace entre les cartes de sports */
+.sports {
+    margin-top: 40px;
+    gap: 30px;
+}
+
+/* Arrière-plan pour la page Football */
+body.football-bg {
+    background-image: url("foot.jpg"); /* mets ton image ici */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* effet parallax */
+}
+
+/* Titres et textes de la page Football en blanc */
+body.football-bg h2,
+body.football-bg h3,
+body.football-bg p {
+    color: white !important;
+}
+
+/* Espaces entre les titres de sections */
+.football-bg h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.football-bg h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Arrière-plan pour la page Rugby */
+body.rugby-bg {
+    background-image: url("rugby.jpg"); /* ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Titres et textes de la page Rugby en blanc */
+body.rugby-bg h2,
+body.rugby-bg h3,
+body.rugby-bg p {
+    color: white !important;
+}
+
+/* Espaces entre les titres de sections Rugby */
+body.rugby-bg h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+body.rugby-bg h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Arrière-plan pour la page Basketball */
+body.basketball-bg {
+    background-image: url("basket.jpg"); /* ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Titres et textes de la page Basketball en blanc */
+body.basketball-bg h2,
+body.basketball-bg h3,
+body.basketball-bg p {
+    color: white !important;
+}
+
+/* Espaces entre les titres de sections Basketball */
+body.basketball-bg h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+body.basketball-bg h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Arrière-plan pour la page Pronostics */
+body.pronostics-bg {
+    background-image: url("pronos.jpg"); /* ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Titre Pronostics en blanc */
+body.pronostics-bg h2 {
+    color: white !important;
+}

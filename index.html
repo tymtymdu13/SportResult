@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportRésult</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="accueil-bg">
+
+<header>
+    <h1>SportRésult</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="football.html">Football</a></li>
+            <li><a href="basketball.html">Basketball</a></li>
+            <li><a href="rugby.html">Rugby</a></li>
+            <li><a href="pronostics.html">Pronostics</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Bienvenue sur SportRésult</h2>
+    <p>Retrouvez tout les matchs, statistiques et pronostics du football, du basketball et du rugby</p>
+</section>
+
+<section class="live-section">
+
+<h2>Matchs en direct</h2>
+<div id="liveFootball"></div></div>
+<div id="liveBasket"></div>
+<div id="liveRugby"></div>
+
+<h2>Résultats récents (5 jours)</h2>
+<div id="pastFootball"></div>
+<div id="pastBasket"></div>
+<div id="pastRugby"></div>
+
+<h2>Matchs à venir (5 jours)</h2>
+<div id="upcomingFootball"></div>
+<div id="upcomingBasket"></div>
+<div id="upcomingRugby"></div>
+
+</section>
+
+<section class="sports">
+
+    <a href="football.html" class="card">
+        <h3>Football</h3>
+        <p>Football : Direct, résultats et matchs à venir.</p>
+    </a>
+
+    <a href="basketball.html" class="card">
+        <h3>Basketball</h3>
+        <p>BasketBall : Suivez les meilleures équipes et compétitions.</p>
+    </a>
+
+    <a href="rugby.html" class="card">
+        <h3>Rugby</h3>
+        <p>Rugby : Résultats et statistiques des championnats.</p>
+    </a>
+
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
