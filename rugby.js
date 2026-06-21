@@ -39,7 +39,7 @@ async function getLiveRugby() {
 async function getLastRugby10Days() {
     let results = [];
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 5; i++) {
         const date = new Date(Date.now() - i * 86400000)
             .toISOString().split("T")[0];
 
@@ -57,7 +57,7 @@ async function getLastRugby10Days() {
 async function getNextRugby10Days() {
     let results = [];
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 5; i++) {
         const date = new Date(Date.now() + i * 86400000)
             .toISOString().split("T")[0];
 
