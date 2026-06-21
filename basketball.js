@@ -41,7 +41,7 @@ async function getLiveBasket() {
 async function getLastBasket10Days() {
     let results = [];
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 5; i++) {
         const date = new Date(Date.now() - i * 86400000)
             .toISOString().split("T")[0];
 
@@ -59,7 +59,7 @@ async function getLastBasket10Days() {
 async function getNextBasket10Days() {
     let results = [];
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 5; i++) {
         const date = new Date(Date.now() + i * 86400000)
             .toISOString().split("T")[0];
 
